@@ -395,6 +395,9 @@
 
     .hero-stage {
       position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
       min-height: 620px;
       padding: 28px;
       border-radius: 36px;
@@ -432,9 +435,8 @@
     }
 
     .stage-alert {
-      position: absolute;
-      top: 24px;
-      right: 24px;
+      position: relative;
+      align-self: flex-end;
       padding: 14px 18px;
       border-radius: 18px;
       background: rgba(255, 255, 255, 0.88);
@@ -460,7 +462,7 @@
       position: relative;
       display: grid;
       gap: 18px;
-      margin-top: 72px;
+      margin-top: 0;
     }
 
     .device-card {
@@ -1202,6 +1204,11 @@
 
       .hero-copy .lead {
         font-size: 18px;
+      }
+
+      .stage-alert {
+        align-self: stretch;
+        max-width: none;
       }
 
       .hero-stage,
