@@ -256,6 +256,8 @@
     .nav-menu {
       display: flex;
       align-items: center;
+      justify-content: center;
+      flex: 1 1 auto;
       gap: 24px;
       font-size: 15px;
       font-weight: 700;
@@ -289,6 +291,49 @@
       border-radius: 50%;
       background: var(--success);
       box-shadow: 0 0 0 6px rgba(31, 143, 99, 0.12);
+    }
+
+    .nav-actions {
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      flex: 0 0 auto;
+    }
+
+    .lang-switch {
+      display: inline-flex;
+      align-items: center;
+      padding: 4px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.82);
+      border: 1px solid rgba(14, 92, 88, 0.1);
+      box-shadow: 0 12px 24px rgba(24, 50, 48, 0.08);
+    }
+
+    .lang-button {
+      min-width: 46px;
+      height: 38px;
+      padding: 0 14px;
+      border: 0;
+      border-radius: 999px;
+      background: transparent;
+      color: var(--muted);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      transition: background 0.2s ease, color 0.2s ease, transform 0.2s ease;
+    }
+
+    .lang-button.is-active {
+      background: linear-gradient(135deg, var(--brand) 0%, #168c86 100%);
+      color: #fff;
+      box-shadow: 0 12px 24px rgba(14, 92, 88, 0.18);
+    }
+
+    .lang-button:hover,
+    .lang-button:focus-visible {
+      transform: translateY(-1px);
     }
 
     .nav-toggle {
@@ -610,6 +655,61 @@
       font-size: 16px;
     }
 
+    .service-logos {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin-top: 22px;
+    }
+
+    .brand-logos {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 16px;
+    }
+
+    .logo-tile {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 108px;
+      padding: 18px;
+      border-radius: 24px;
+      background: rgba(255, 255, 255, 0.88);
+      border: 1px solid rgba(14, 92, 88, 0.08);
+      box-shadow: 0 18px 30px rgba(24, 50, 48, 0.06);
+      transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    }
+
+    .logo-tile:hover,
+    .logo-tile:focus-visible {
+      transform: translateY(-2px);
+      box-shadow: 0 20px 34px rgba(24, 50, 48, 0.09);
+      border-color: rgba(14, 92, 88, 0.16);
+    }
+
+    .service-logos .logo-tile {
+      height: 74px;
+      padding: 14px;
+      border-radius: 20px;
+      background: rgba(14, 92, 88, 0.04);
+      box-shadow: none;
+    }
+
+    .logo-mark {
+      width: 100%;
+      height: 44px;
+    }
+
+    .service-logos .logo-mark {
+      height: 28px;
+    }
+
+    .logo-mark svg {
+      width: 100%;
+      height: 100%;
+    }
+
     .mini-list {
       display: flex;
       flex-wrap: wrap;
@@ -760,24 +860,8 @@
       margin-bottom: 10px;
     }
 
-    .brand-cloud {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-    }
-
-    .brand-cloud span {
-      padding: 12px 18px;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.84);
-      border: 1px solid rgba(14, 92, 88, 0.08);
-      font-weight: 800;
-      color: var(--ink);
-      box-shadow: 0 10px 24px rgba(24, 50, 48, 0.05);
-    }
-
     .brand-note {
-      margin-top: 18px;
+      margin-top: 20px;
       color: var(--muted);
       font-size: 16px;
     }
@@ -1134,11 +1218,18 @@
       .trust-frame {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
+
+      .brand-logos {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+      }
     }
 
     @media (max-width: 920px) {
       .nav {
+        position: relative;
         min-height: 78px;
+        padding: 14px 0;
+        gap: 12px;
       }
 
       .nav-toggle {
@@ -1171,6 +1262,10 @@
         display: none;
       }
 
+      .nav-actions {
+        margin-left: auto;
+      }
+
       .hero-points {
         grid-template-columns: 1fr;
       }
@@ -1179,9 +1274,17 @@
         flex-direction: column;
         align-items: flex-start;
       }
+
+      .brand-logos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
     }
 
     @media (max-width: 640px) {
+      body {
+        padding-bottom: 92px;
+      }
+
       .section {
         padding: 72px 0;
       }
@@ -1206,6 +1309,30 @@
         font-size: 18px;
       }
 
+      .brand-mark {
+        width: 46px;
+        height: 46px;
+        border-radius: 16px;
+      }
+
+      .brand-title {
+        font-size: 18px;
+      }
+
+      .brand-subtitle {
+        display: none;
+      }
+
+      .lang-switch {
+        padding: 3px;
+      }
+
+      .lang-button {
+        min-width: 42px;
+        height: 36px;
+        padding: 0 12px;
+      }
+
       .stage-alert {
         align-self: stretch;
         max-width: none;
@@ -1227,6 +1354,41 @@
         grid-template-columns: 1fr;
       }
 
+      .hero-actions .button,
+      .contact-actions .button {
+        width: 100%;
+      }
+
+      .panel-top,
+      .price-row {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      .service-logos,
+      .brand-logos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .logo-tile {
+        height: 88px;
+        padding: 14px;
+        border-radius: 20px;
+      }
+
+      .service-logos .logo-tile {
+        height: 68px;
+        padding: 12px;
+      }
+
+      .logo-mark {
+        height: 34px;
+      }
+
+      .service-logos .logo-mark {
+        height: 24px;
+      }
+
       .trust-frame {
         grid-template-columns: 1fr;
       }
@@ -1238,6 +1400,20 @@
 
       .floating-bar {
         display: flex;
+        left: 12px;
+        right: 12px;
+        bottom: 12px;
+        padding: 14px 16px;
+        gap: 12px;
+        align-items: center;
+      }
+
+      .floating-bar small {
+        font-size: 11px;
+      }
+
+      .floating-bar strong {
+        font-size: 15px;
       }
     }
   </style>
@@ -1379,14 +1555,6 @@
         </div>
       </a>
 
-      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Открыть меню">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-          <path d="M4 7H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          <path d="M4 12H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-          <path d="M4 17H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-        </svg>
-      </button>
-
       <nav class="nav-menu" id="nav-menu" aria-label="Основная навигация">
         <a href="#services">Услуги</a>
         <a href="#prices">Цены</a>
@@ -1396,10 +1564,25 @@
         <a href="#contacts">Контакты</a>
       </nav>
 
-      <a class="nav-phone" href="tel:+77079849909">
-        <span aria-hidden="true"></span>
-        +77079849909
-      </a>
+      <div class="nav-actions">
+        <div class="lang-switch" role="group" aria-label="Переключение языка">
+          <button class="lang-button is-active" type="button" data-lang="ru" aria-pressed="true">RU</button>
+          <button class="lang-button" type="button" data-lang="kz" aria-pressed="false">KZ</button>
+        </div>
+
+        <a class="nav-phone" href="tel:+77079849909">
+          <span aria-hidden="true"></span>
+          +77079849909
+        </a>
+
+        <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="nav-menu" aria-label="Открыть меню">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+            <path d="M4 7H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M4 12H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+            <path d="M4 17H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </button>
+      </div>
     </div>
   </header>
 
@@ -1572,13 +1755,7 @@
             </div>
             <h3>Ремонт стиральных машин</h3>
             <p>От простых засоров и проблем со сливом до замены ТЭНа, насоса, амортизаторов, модуля управления и подшипников.</p>
-            <ul class="mini-list">
-              <li>LG</li>
-              <li>Samsung</li>
-              <li>Bosch</li>
-              <li>Indesit</li>
-              <li>Haier</li>
-            </ul>
+            <div class="service-logos" data-logo-set="washers" aria-label="Логотипы брендов стиральных машин"></div>
           </article>
 
           <article class="service-card reveal">
@@ -1593,13 +1770,7 @@
             </div>
             <h3>Ремонт посудомоечных машин</h3>
             <p>Устраняем проблемы с набором и сливом воды, нагревом, сушкой, циркуляцией, датчиками, насосами и электроникой.</p>
-            <ul class="mini-list">
-              <li>Bosch</li>
-              <li>Electrolux</li>
-              <li>Beko</li>
-              <li>Whirlpool</li>
-              <li>Midea</li>
-            </ul>
+            <div class="service-logos" data-logo-set="dishwashers" aria-label="Логотипы брендов посудомоечных машин"></div>
           </article>
 
           <article class="service-card reveal">
@@ -1613,13 +1784,7 @@
             </div>
             <h3>Ремонт холодильников</h3>
             <p>Работаем с капельными и No Frost моделями: компрессор, пусковое реле, утечки, датчики, вентиляторы и система оттайки.</p>
-            <ul class="mini-list">
-              <li>Atlant</li>
-              <li>LG</li>
-              <li>Samsung</li>
-              <li>Gorenje</li>
-              <li>Ariston</li>
-            </ul>
+            <div class="service-logos" data-logo-set="fridges" aria-label="Логотипы брендов холодильников"></div>
           </article>
         </div>
       </div>
@@ -1820,7 +1985,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="process">
       <div class="container">
         <div class="section-heading reveal">
           <p class="eyebrow">Как проходит ремонт</p>
@@ -1864,7 +2029,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="brands">
       <div class="container">
         <div class="section-heading reveal">
           <p class="eyebrow">Бренды и модели</p>
@@ -1872,20 +2037,7 @@
           <p>Если вашего бренда нет в списке, это не значит, что мы с ним не работаем. Чаще всего достаточно назвать модель техники по телефону, чтобы сразу оценить сложность задачи и подготовить выезд.</p>
         </div>
 
-        <div class="brand-cloud reveal">
-          <span>LG</span>
-          <span>Samsung</span>
-          <span>Bosch</span>
-          <span>Electrolux</span>
-          <span>Indesit</span>
-          <span>Beko</span>
-          <span>Whirlpool</span>
-          <span>Haier</span>
-          <span>Atlant</span>
-          <span>Ariston</span>
-          <span>Gorenje</span>
-          <span>Midea</span>
-        </div>
+        <div class="brand-logos reveal" id="brand-logos" aria-label="Логотипы брендов"></div>
 
         <p class="brand-note reveal">Чаще всего к нам обращаются по запросам: ремонт стиральной машины на дому в Алматы, ремонт посудомоечной машины Bosch, ремонт холодильника No Frost и срочный выезд мастера по Алматинской области.</p>
       </div>
@@ -1893,7 +2045,7 @@
 
     <section class="section" id="coverage">
       <div class="container coverage-grid">
-        <div class="reveal">
+        <div class="reveal coverage-copy">
           <p class="eyebrow">География выезда</p>
           <h2>Обслуживаем весь Алматы и выезжаем по Алматинской области</h2>
           <p>Принимаем заявки из центра, спальных районов, частного сектора и ближайших пригородов. Для области сразу говорим по времени выезда и логистике, чтобы не было неопределенности.</p>
@@ -1923,7 +2075,7 @@
       </div>
     </section>
 
-    <section class="section">
+    <section class="section" id="about">
       <div class="container about-grid">
         <div class="about-card reveal">
           <p class="eyebrow">О сервисе</p>
@@ -2112,36 +2264,6 @@
     </div>
     <strong>+77079849909</strong>
   </a>
-  <script>
-    const navToggle = document.querySelector(".nav-toggle");
-    const navMenu = document.querySelector(".nav-menu");
-
-    if (navToggle && navMenu) {
-      navToggle.addEventListener("click", () => {
-        const isOpen = navMenu.classList.toggle("is-open");
-        navToggle.setAttribute("aria-expanded", String(isOpen));
-      });
-
-      navMenu.querySelectorAll("a").forEach((link) => {
-        link.addEventListener("click", () => {
-          navMenu.classList.remove("is-open");
-          navToggle.setAttribute("aria-expanded", "false");
-        });
-      });
-    }
-
-    const revealItems = document.querySelectorAll(".reveal");
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add("is-visible");
-          observer.unobserve(entry.target);
-        }
-      });
-    }, { threshold: 0.16 });
-
-    revealItems.forEach((item) => observer.observe(item));
-    document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
+  <script src="./app.js"></script>
 </body>
 </html>
