@@ -14,70 +14,18 @@ const LOGO_SETS = {
 };
 
 const BRAND_LOGOS = {
-  LG: `
-    <svg viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-      <circle cx="34" cy="30" r="22" fill="none" stroke="#a50034" stroke-width="4"/>
-      <path d="M29 18V35H40" fill="none" stroke="#a50034" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M47 24a11 11 0 1 0 0 12H36" fill="none" stroke="#a50034" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
-      <text x="74" y="39" fill="#a50034" font-family="Arial, sans-serif" font-size="28" font-weight="700">LG</text>
-    </svg>`,
-  Samsung: `
-    <svg viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-      <ellipse cx="90" cy="30" rx="70" ry="22" fill="none" stroke="#034ea2" stroke-width="4"/>
-      <text x="90" y="37" fill="#034ea2" font-family="Arial, sans-serif" font-size="24" font-weight="700" text-anchor="middle" letter-spacing="1.8">SAMSUNG</text>
-    </svg>`,
-  Bosch: `
-    <svg viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-      <circle cx="28" cy="30" r="16" fill="none" stroke="#d71920" stroke-width="4"/>
-      <path d="M22 20V40M34 20V40" stroke="#d71920" stroke-width="4" stroke-linecap="round"/>
-      <text x="60" y="38" fill="#d71920" font-family="Arial, sans-serif" font-size="28" font-weight="700">Bosch</text>
-    </svg>`,
-  Electrolux: `
-    <svg viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-      <circle cx="28" cy="30" r="15" fill="none" stroke="#123d82" stroke-width="4"/>
-      <path d="M20 24h16M20 30h10M20 36h16" stroke="#123d82" stroke-width="4" stroke-linecap="round"/>
-      <text x="58" y="38" fill="#123d82" font-family="Arial, sans-serif" font-size="24" font-weight="700">Electrolux</text>
-    </svg>`,
-  Indesit: `
-    <svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-      <text x="18" y="39" fill="#1447a6" font-family="Arial, sans-serif" font-size="30" font-weight="700">indesit</text>
-      <rect x="146" y="18" width="18" height="24" rx="4" fill="#1447a6"/>
-      <rect x="152" y="24" width="6" height="12" rx="2" fill="#ffffff"/>
-    </svg>`,
-  Beko: `
-    <svg viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-      <path d="M24 41H156" stroke="#0a66c2" stroke-width="3"/>
-      <text x="24" y="36" fill="#0a66c2" font-family="Arial, sans-serif" font-size="30" font-style="italic" font-weight="700">beko</text>
-    </svg>`,
-  Whirlpool: `
-    <svg viewBox="0 0 220 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-      <text x="18" y="38" fill="#1d2152" font-family="Arial, sans-serif" font-size="24" font-weight="700">Whirlpool</text>
-      <ellipse cx="124" cy="18" rx="34" ry="10" fill="none" stroke="#f8c12d" stroke-width="4" transform="rotate(-8 124 18)"/>
-    </svg>`,
-  Haier: `
-    <svg viewBox="0 0 180 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-      <text x="22" y="39" fill="#0046ad" font-family="Arial, sans-serif" font-size="30" font-weight="700">Haier</text>
-    </svg>`,
-  Atlant: `
-    <svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-      <path d="M24 42 38 18 52 42" fill="none" stroke="#00a3e0" stroke-width="4" stroke-linejoin="round"/>
-      <text x="66" y="39" fill="#00a3e0" font-family="Arial, sans-serif" font-size="28" font-weight="700">ATLANT</text>
-    </svg>`,
-  Ariston: `
-    <svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-      <rect x="18" y="14" width="164" height="32" rx="8" fill="#17345f"/>
-      <text x="100" y="36" fill="#ffffff" font-family="Arial, sans-serif" font-size="22" font-weight="700" text-anchor="middle">ARISTON</text>
-    </svg>`,
-  Gorenje: `
-    <svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-      <text x="18" y="38" fill="#666666" font-family="Arial, sans-serif" font-size="28" font-weight="700">gorenje</text>
-    </svg>`,
-  Midea: `
-    <svg viewBox="0 0 200 60" xmlns="http://www.w3.org/2000/svg" role="img" aria-hidden="true">
-      <path d="M34 30a12 12 0 1 1 12 12" fill="none" stroke="#0a78d1" stroke-width="4" stroke-linecap="round"/>
-      <path d="M46 18a12 12 0 1 1 0 24" fill="none" stroke="#0a78d1" stroke-width="4" stroke-linecap="round"/>
-      <text x="70" y="38" fill="#0a78d1" font-family="Arial, sans-serif" font-size="28" font-weight="700">Midea</text>
-    </svg>`,
+  LG: "assets/brands/lg.svg",
+  Samsung: "assets/brands/samsung.svg",
+  Bosch: "assets/brands/bosch.svg",
+  Electrolux: "assets/brands/electrolux.svg",
+  Indesit: "assets/brands/indesit.svg",
+  Beko: "assets/brands/beko.svg",
+  Whirlpool: "assets/brands/whirlpool.svg",
+  Haier: "assets/brands/haier.svg",
+  Atlant: "assets/brands/atlant.svg",
+  Ariston: "assets/brands/ariston.svg",
+  Gorenje: "assets/brands/gorenje.svg",
+  Midea: "assets/brands/midea.svg",
 };
 
 const RU_TRANSLATION = {
@@ -102,7 +50,8 @@ const RU_TRANSLATION = {
   languageSwitcher: "Переключение языка",
   hero: {
     eyebrow: "Алматы и Алматинская область",
-    title: "Ремонт бытовой техники на дому без лишнего ожидания и сюрпризов в цене",
+    title: "Ремонт техники на дому",
+    promise: "Без лишнего ожидания и сюрпризов в цене.",
     lead: "Восстанавливаем стиральные машины, посудомоечные машины и холодильники. Приезжаем в день обращения, спокойно объясняем причину поломки и выполняем ремонт так, чтобы техника снова работала уверенно, а не до следующей недели.",
     buttons: ["Позвонить мастеру", "Узнать стоимость"],
     points: [
@@ -134,13 +83,13 @@ const RU_TRANSLATION = {
   services: {
     heading: {
       eyebrow: "Что ремонтируем",
-      title: "Три направления, в которых важны опыт, аккуратность и понимание техники",
+      title: "Что ремонтируем",
       text: "Мы не распыляемся на все подряд. Основной фокус сервиса, выезда мастеров и склада комплектующих заточен под востребованную бытовую технику, которую чаще всего вызывают чинить в Алматы.",
     },
     cards: [
-      { title: "Ремонт стиральных машин", text: "От простых засоров и проблем со сливом до замены ТЭНа, насоса, амортизаторов, модуля управления и подшипников." },
-      { title: "Ремонт посудомоечных машин", text: "Устраняем проблемы с набором и сливом воды, нагревом, сушкой, циркуляцией, датчиками, насосами и электроникой." },
-      { title: "Ремонт холодильников", text: "Работаем с капельными и No Frost моделями: компрессор, пусковое реле, утечки, датчики, вентиляторы и система оттайки." },
+      { title: "Стиральные машины", text: "От простых засоров и проблем со сливом до замены ТЭНа, насоса, амортизаторов, модуля управления и подшипников." },
+      { title: "Посудомоечные машины", text: "Устраняем проблемы с набором и сливом воды, нагревом, сушкой, циркуляцией, датчиками, насосами и электроникой." },
+      { title: "Холодильники", text: "Работаем с капельными и No Frost моделями: компрессор, пусковое реле, утечки, датчики, вентиляторы и система оттайки." },
     ],
     logoLabels: [
       "Логотипы брендов стиральных машин",
@@ -151,7 +100,7 @@ const RU_TRANSLATION = {
   prices: {
     heading: {
       eyebrow: "Ориентир по стоимости",
-      title: "Ниже не абстрактные обещания, а понятные примеры типовых работ",
+      title: "Стоимость ремонта",
       text: "Точная цена зависит от модели техники и причины неисправности. Но до начала ремонта мастер объясняет, что произошло, какие варианты решения есть и во сколько это обойдется.",
     },
     panels: [
@@ -190,7 +139,7 @@ const RU_TRANSLATION = {
   benefits: {
     heading: {
       eyebrow: "Почему выбирают нас",
-      title: "Сервис, в котором важен не только результат, но и то, как проходит сам ремонт",
+      title: "Почему выбирают ALMAFIX",
       text: "Для клиента хороший мастер это не человек с чемоданом деталей, а специалист, который приезжает вовремя, не навязывает лишнего и оставляет после себя исправную технику и порядок.",
     },
     cards: [
@@ -205,7 +154,7 @@ const RU_TRANSLATION = {
   process: {
     heading: {
       eyebrow: "Как проходит ремонт",
-      title: "Понятный процесс без беготни, ожидания и ремонта вслепую",
+      title: "Как проходит ремонт",
       text: "Чем быстрее мастер понимает симптомы, тем быстрее техника возвращается в рабочий режим. Поэтому мы выстраиваем процесс так, чтобы клиент заранее понимал, что будет происходить дальше.",
     },
     steps: [
@@ -215,7 +164,7 @@ const RU_TRANSLATION = {
       { title: "Восстанавливаем технику", text: "Выполняем ремонт, проверяем работу устройства и выдаем гарантию на согласованные работы." },
     ],
     cta: {
-      title: "Нужно срочно вернуть технику в рабочее состояние?",
+      title: "Нужен срочный ремонт?",
       text: "Позвоните сейчас: подскажем по симптомам, сориентируем по выезду и скажем, что подготовить к приезду мастера.",
       secondary: "Контакты",
     },
@@ -223,7 +172,7 @@ const RU_TRANSLATION = {
   brands: {
     heading: {
       eyebrow: "Бренды и модели",
-      title: "Работаем с распространенными брендами и не теряемся на редких моделях",
+      title: "Бренды техники",
       text: "Если вашего бренда нет в списке, это не значит, что мы с ним не работаем. Чаще всего достаточно назвать модель техники по телефону, чтобы сразу оценить сложность задачи и подготовить выезд.",
     },
     note: "Чаще всего к нам обращаются по запросам: ремонт стиральной машины на дому в Алматы, ремонт посудомоечной машины Bosch, ремонт холодильника No Frost и срочный выезд мастера по Алматинской области.",
@@ -231,10 +180,10 @@ const RU_TRANSLATION = {
   },
   coverage: {
     eyebrow: "География выезда",
-    title: "Обслуживаем весь Алматы и выезжаем по Алматинской области",
+    title: "Алматы и область",
     text: "Принимаем заявки из центра, спальных районов, частного сектора и ближайших пригородов. Для области сразу говорим по времени выезда и логистике, чтобы не было неопределенности.",
     cities: ["Алматы", "Каскелен", "Талгар", "Есик", "Конаев", "Боралдай", "Отеген батыр", "Иргели"],
-    cardTitle: "По каким заявкам выезжаем чаще всего",
+    cardTitle: "Частые обращения",
     checks: [
       "Стиральная машина остановилась с водой и не открывает люк",
       "Посудомоечная машина завершает цикл с грязной посудой",
@@ -247,7 +196,7 @@ const RU_TRANSLATION = {
   about: {
     card: {
       eyebrow: "О сервисе",
-      title: "Работаем так, чтобы нас рекомендовали после первого вызова",
+      title: "Сервис с гарантией",
       text: "Рынок ремонта бытовой техники перегрет обещаниями. Поэтому наша задача не просто приехать быстрее других, а провести весь визит профессионально: от первого звонка до проверки техники после ремонта.",
       stats: [
         { label: "Средний опыт мастеров", value: "10+ лет" },
@@ -256,7 +205,7 @@ const RU_TRANSLATION = {
       ],
     },
     copy: {
-      title: "Почему это удобно клиенту",
+      title: "Ремонт без лишних забот",
       paragraphs: [
         "Когда стиральная машина перестает сливать воду, посудомойка не запускается, а холодильник начинает греть, человеку важны две вещи: скорость и уверенность, что его не будут раскручивать на ненужные расходы. Именно на этом и построен сервис ALMAFIX.",
         "Мы заранее оговариваем условия выезда, работаем по Алматы и области, не прячем цену до последней минуты и не пугаем техническими терминами. В итоге клиент понимает, за что платит, а техника возвращается в рабочий режим без лишнего стресса.",
@@ -267,7 +216,7 @@ const RU_TRANSLATION = {
   faq: {
     heading: {
       eyebrow: "Частые вопросы",
-      title: "Собрали ответы на то, что чаще всего спрашивают перед вызовом мастера",
+      title: "Вопросы и ответы",
       text: "Если вашего вопроса здесь нет, просто позвоните. Обычно по телефону уже можно понять, насколько срочная ситуация и что лучше сделать до приезда мастера.",
     },
     items: [
@@ -296,7 +245,7 @@ const RU_TRANSLATION = {
   contacts: {
     card: {
       eyebrow: "Связаться с мастером",
-      title: 'Оставлять технику "на потом" обычно дороже, чем решить вопрос сразу',
+      title: "Вызовите мастера",
       text: "Если стиралка начала подтекать, посудомойка перестала отмывать, а холодильник держит температуру хуже обычного, лучше вызвать мастера до того, как поломка потянет за собой новые расходы.",
       buttons: ["Позвонить сейчас", "Сравнить цены"],
       items: [
@@ -328,9 +277,9 @@ const RU_TRANSLATION = {
   schema: {
     addressRegion: "Алматинская область",
     serviceType: [
-      "Ремонт стиральных машин",
-      "Ремонт посудомоечных машин",
-      "Ремонт холодильников",
+      "Стиральные машины",
+      "Посудомоечные машины",
+      "Холодильники",
     ],
     catalogName: "Услуги по ремонту бытовой техники",
     catalogItems: [
@@ -363,7 +312,8 @@ const KZ_TRANSLATION = {
   languageSwitcher: "Тілді ауыстыру",
   hero: {
     eyebrow: "Алматы және Алматы облысы",
-    title: "Тұрмыстық техниканы үйде ұзақ күттірмей және бағада тосынсыйсыз жөндеу",
+    title: "Техниканы үйде жөндеу",
+    promise: "Ұзақ күттірмей және бағада тосынсыйсыз.",
     lead: "Кір жуғыш машиналарды, ыдыс жуғыш машиналарды және тоңазытқыштарды қалпына келтіреміз. Өтінім түскен күні келеміз, ақаудың себебін түсінікті айтып береміз және техниканы келесі аптаға дейін емес, сенімді жұмыс істеуі үшін жөндейміз.",
     buttons: ["Шеберге қоңырау шалу", "Бағаны білу"],
     points: [
@@ -395,13 +345,13 @@ const KZ_TRANSLATION = {
   services: {
     heading: {
       eyebrow: "Не жөндейміз",
-      title: "Тәжірибе, ұқыптылық және техниканы түсіну қажет үш негізгі бағыт",
+      title: "Не жөндейміз",
       text: "Біз бәрін бірдей қамтымаймыз. Сервис, шығатын шеберлер және бөлшек қоры Алматыда жиі жөнделетін тұрмыстық техникаға бейімделген.",
     },
     cards: [
-      { title: "Кір жуғыш машиналарды жөндеу", text: "Қарапайым бітелуден бастап ТЭН, сорғы, амортизаторлар, басқару модулі және подшипниктерді ауыстыруға дейін." },
-      { title: "Ыдыс жуғыш машиналарды жөндеу", text: "Су алуы мен төгуі, қыздыруы, кептіруі, айналымы, датчиктері, сорғылары және электроникасы бойынша ақауларды жөндейміз." },
-      { title: "Тоңазытқыштарды жөндеу", text: "Тамшылы және No Frost үлгілерімен жұмыс істейміз: компрессор, іске қосу релесі, ағу, датчиктер, желдеткіштер және еріту жүйесі." },
+      { title: "Кір жуғыш машиналар", text: "Қарапайым бітелуден бастап ТЭН, сорғы, амортизаторлар, басқару модулі және подшипниктерді ауыстыруға дейін." },
+      { title: "Ыдыс жуғыш машиналар", text: "Су алуы мен төгуі, қыздыруы, кептіруі, айналымы, датчиктері, сорғылары және электроникасы бойынша ақауларды жөндейміз." },
+      { title: "Тоңазытқыштар", text: "Тамшылы және No Frost үлгілерімен жұмыс істейміз: компрессор, іске қосу релесі, ағу, датчиктер, желдеткіштер және еріту жүйесі." },
     ],
     logoLabels: [
       "Кір жуғыш машиналар брендтерінің логотиптері",
@@ -412,7 +362,7 @@ const KZ_TRANSLATION = {
   prices: {
     heading: {
       eyebrow: "Баға бағдары",
-      title: "Бұл бос уәде емес, жиі кездесетін жұмыстардың түсінікті мысалдары",
+      title: "Жөндеу бағасы",
       text: "Нақты баға техника моделіне және ақаудың себебіне байланысты. Бірақ жөндеу басталғанға дейін шебер не болғанын, қандай шешімдер барын және оның қанша тұратынын түсіндіреді.",
     },
     panels: [
@@ -451,7 +401,7 @@ const KZ_TRANSLATION = {
   benefits: {
     heading: {
       eyebrow: "Неге бізді таңдайды",
-      title: "Нәтиже ғана емес, жөндеудің қалай өтетіні де маңызды сервис",
+      title: "Неге ALMAFIX",
       text: "Клиент үшін жақсы шебер бұл бөлшекке толы шабаданы бар адам емес, уақытында келетін, артық нәрсе ұсынбайтын және артынан жұмыс істейтін техника мен тәртіп қалдыратын маман.",
     },
     cards: [
@@ -466,7 +416,7 @@ const KZ_TRANSLATION = {
   process: {
     heading: {
       eyebrow: "Жөндеу қалай өтеді",
-      title: "Артық әбігерсіз, ұзақ күтусіз және соқыр жөндеусіз түсінікті процесс",
+      title: "Жөндеу тәртібі",
       text: "Шебер белгілерді неғұрлым тез түсінсе, техника соғұрлым тез жұмыс режиміне қайтады. Сондықтан клиент келесі қадамдарды алдын ала түсінетіндей етіп процесті құрамыз.",
     },
     steps: [
@@ -476,7 +426,7 @@ const KZ_TRANSLATION = {
       { title: "Техниканы қалпына келтіреміз", text: "Жөндеуді орындаймыз, құрылғы жұмысын тексереміз және келісілген жұмысқа кепілдік береміз." },
     ],
     cta: {
-      title: "Техниканы шұғыл жұмыс жағдайына қайтару керек пе?",
+      title: "Шұғыл жөндеу керек пе?",
       text: "Қазір қоңырау шалыңыз: белгілері бойынша бағыт береміз, шығу уақытын айтамыз және шебер келгенше не дайындау керегін түсіндіреміз.",
       secondary: "Байланыс",
     },
@@ -484,7 +434,7 @@ const KZ_TRANSLATION = {
   brands: {
     heading: {
       eyebrow: "Брендтер мен модельдер",
-      title: "Кең таралған брендтермен жұмыс істейміз және сирек модельдерден де жаңылмаймыз",
+      title: "Техника брендтері",
       text: "Егер брендіңіз тізімде болмаса, бұл онымен жұмыс істемейміз деген сөз емес. Көбіне техника моделін телефонмен айту жеткілікті: сол сәтте-ақ күрделілікті бағалап, шығуға дайындаламыз.",
     },
     note: "Бізге көбіне мынадай сұраныстармен жүгінеді: Алматыда үйге келіп кір жуғыш машинаны жөндеу, Bosch ыдыс жуғыш машинасын жөндеу, No Frost тоңазытқышын жөндеу және Алматы облысы бойынша шұғыл шығу.",
@@ -492,7 +442,7 @@ const KZ_TRANSLATION = {
   },
   coverage: {
     eyebrow: "Шығу географиясы",
-    title: "Алматының бәріне қызмет көрсетеміз және Алматы облысына да шығамыз",
+    title: "Алматы және облыс",
     text: "Өтінімдерді орталықтан, ұйықтайтын аудандардан, жеке сектордан және жақын маңдағы елді мекендерден қабылдаймыз. Облысқа шығуда уақыт пен логистикасын бірден айтамыз.",
     cities: ["Алматы", "Қаскелең", "Талғар", "Есік", "Қонаев", "Боралдай", "Өтеген батыр", "Іргелі"],
     cardTitle: "Қандай өтінімдерге жиі шығамыз",
@@ -508,7 +458,7 @@ const KZ_TRANSLATION = {
   about: {
     card: {
       eyebrow: "Сервис туралы",
-      title: "Бірінші шақырудан кейін-ақ ұсынатындай жұмыс істейміз",
+      title: "Кепілдігі бар сервис",
       text: "Тұрмыстық техниканы жөндеу нарығы уәдеге толы. Сондықтан біздің міндетіміз басқалардан тез жету ғана емес, бүкіл сапарды кәсіби өткізу: бірінші қоңыраудан бастап жөндеуден кейін техниканы тексеруге дейін.",
       stats: [
         { label: "Шеберлердің орташа тәжірибесі", value: "10+ жыл" },
@@ -528,7 +478,7 @@ const KZ_TRANSLATION = {
   faq: {
     heading: {
       eyebrow: "Жиі қойылатын сұрақтар",
-      title: "Шебер шақырмай тұрып жиі қойылатын сұрақтарға жауап жинадық",
+      title: "Сұрақтар мен жауаптар",
       text: "Егер сұрағыңыз мұнда болмаса, жай ғана қоңырау шалыңыз. Көбіне телефон арқылы-ақ жағдайдың қаншалықты шұғыл екенін және шебер келгенше не істеу керегін түсінуге болады.",
     },
     items: [
@@ -557,7 +507,7 @@ const KZ_TRANSLATION = {
   contacts: {
     card: {
       eyebrow: "Шебермен байланысу",
-      title: 'Техниканы "кейінге" қалдыру көбіне мәселені қазір шешкеннен қымбатқа түседі',
+      title: "Шебер шақырыңыз",
       text: "Егер кір жуғыш машина аға бастаса, ыдыс жуғыш машина ыдысты жумаса, ал тоңазытқыш температураны әдеттегіден нашар ұстаса, ақау жаңа шығынға ұласпай тұрғанда шебер шақырған дұрыс.",
       buttons: ["Қазір қоңырау шалу", "Бағаларды салыстыру"],
       items: [
@@ -589,9 +539,9 @@ const KZ_TRANSLATION = {
   schema: {
     addressRegion: "Алматы облысы",
     serviceType: [
-      "Кір жуғыш машиналарды жөндеу",
-      "Ыдыс жуғыш машиналарды жөндеу",
-      "Тоңазытқыштарды жөндеу",
+      "Кір жуғыш машиналар",
+      "Ыдыс жуғыш машиналар",
+      "Тоңазытқыштар",
     ],
     catalogName: "Тұрмыстық техниканы жөндеу қызметтері",
     catalogItems: [
@@ -618,16 +568,13 @@ function setSectionHeading(root, data) {
   if (!root) {
     return;
   }
-  const paragraphs = root.querySelectorAll("p");
-  if (paragraphs[0]) {
-    paragraphs[0].textContent = data.eyebrow;
-  }
+  const paragraph = root.querySelector("p");
   const title = root.querySelector("h2");
   if (title) {
     title.textContent = data.title;
   }
-  if (paragraphs[1]) {
-    paragraphs[1].textContent = data.text;
+  if (paragraph) {
+    paragraph.textContent = data.text;
   }
 }
 
@@ -649,8 +596,8 @@ function setListText(elements, values) {
 
 function createLogoTile(name) {
   return `
-    <div class="logo-tile" aria-label="${name}" title="${name}">
-      <div class="logo-mark">${BRAND_LOGOS[name] || `<span>${name}</span>`}</div>
+    <div class="logo-tile" title="${name}">
+      <div class="logo-mark"><img src="${BRAND_LOGOS[name]}" alt="${name}" decoding="async"></div>
     </div>`;
 }
 
@@ -762,10 +709,14 @@ function applyLanguage(language) {
 
   const heroCopy = document.querySelector(".hero-copy");
   if (heroCopy) {
-    heroCopy.querySelector(".eyebrow").textContent = t.hero.eyebrow;
+    heroCopy.querySelector(".service-area").textContent = t.hero.eyebrow;
     heroCopy.querySelector("h1").textContent = t.hero.title;
+    heroCopy.querySelector(".hero-promise").textContent = t.hero.promise;
     heroCopy.querySelector(".lead").textContent = t.hero.lead;
-    setListText(heroCopy.querySelectorAll(".hero-actions a"), t.hero.buttons);
+    heroCopy.querySelectorAll(".hero-actions a").forEach((link, index) => {
+      const label = link.querySelector(".button-call-label") || link;
+      label.textContent = t.hero.buttons[index];
+    });
   }
   setListHTML(document.querySelectorAll(".hero-points li"), t.hero.points);
   setListHTML(document.querySelectorAll(".hero-metrics .metric-chip"), t.hero.metrics);
@@ -859,7 +810,6 @@ function applyLanguage(language) {
 
   const coverageCopy = document.querySelector("#coverage .coverage-copy");
   if (coverageCopy) {
-    coverageCopy.querySelector(".eyebrow").textContent = t.coverage.eyebrow;
     coverageCopy.querySelector("h2").textContent = t.coverage.title;
     coverageCopy.querySelector("h2 + p").textContent = t.coverage.text;
     setListText(coverageCopy.querySelectorAll(".coverage-list li"), t.coverage.cities);
@@ -874,7 +824,6 @@ function applyLanguage(language) {
 
   const aboutCard = document.querySelector("#about .about-card");
   if (aboutCard) {
-    aboutCard.querySelector(".eyebrow").textContent = t.about.card.eyebrow;
     aboutCard.querySelector("h2").textContent = t.about.card.title;
     aboutCard.querySelector("h2 + p").textContent = t.about.card.text;
     aboutCard.querySelectorAll(".about-stat").forEach((stat, index) => {
@@ -902,7 +851,6 @@ function applyLanguage(language) {
 
   const contactCard = document.querySelector("#contacts .contact-card");
   if (contactCard) {
-    contactCard.querySelector(".eyebrow").textContent = t.contacts.card.eyebrow;
     contactCard.querySelector("h2").textContent = t.contacts.card.title;
     contactCard.querySelector("h2 + p").textContent = t.contacts.card.text;
     setListText(contactCard.querySelectorAll(".contact-actions a"), t.contacts.card.buttons);
